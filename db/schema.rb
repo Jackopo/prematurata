@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160115164929) do
+ActiveRecord::Schema.define(version: 20160115171607) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20160115164929) do
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
