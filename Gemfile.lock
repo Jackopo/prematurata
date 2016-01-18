@@ -169,6 +169,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.1)
   byebug
   casein (~> 5.1.1)
   coffee-rails (~> 4.1.0)
