@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'homepage/index'
+
   resources :pages
 	#Casein routes
 	namespace :casein do
