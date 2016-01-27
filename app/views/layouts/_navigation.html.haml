@@ -1,5 +1,5 @@
 %nav.navbar.navbar-default
-  .container-fluid.hidden-lg.hidden-md
+  .container-fluid
     -# Brand and toggle get grouped for better mobile display
     %button.navbar-toggle.collapsed{data: {toggle: "collapse", target:"#some-id"}, type: "button", aria: {expanded: "false"}}
       %span.sr-only Toggle Navigation
@@ -8,9 +8,9 @@
       %span.icon-bar
     = link_to "Home", root_path, class: "navbar-brand"
 
-  -# Collect the nav links, forms, and other content for toggling
-  %div#some-id.collapse.navbar-collapse
-    %ul.nav.navbar-nav
-      - @pages.each_with_index do |page, i|
-        %li
-          = link_to page.title, page_path(page.id), class:"#{'active' if i == 0}"
+    -# Collect the nav links, forms, and other content for toggling
+    %div#some-id.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        - @pages.each_with_index do |page, i|
+          %li
+            = link_to page.title, page_path(page.id), class:"#{'active' if i == 0}"
