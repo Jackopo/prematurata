@@ -17,4 +17,5 @@
   %body
     %p.notice= notice
     %p.alert= alert
+    = render "layouts/navigation", locals: {pages: @pages}
     = yield
