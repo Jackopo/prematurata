@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :posts
   root 'homepage#index'
 
   resources :pages
 	#Casein routes
 	namespace :casein do
+		resources :posts
 		resources :pages
 	end
 
